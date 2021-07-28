@@ -5,11 +5,12 @@ It is significantly slower to train but it is all automated and local so interne
 Due to the lengthy training process, there is no finished model that could've been tested and so performance of this approach is completely unknown. <br />
 
 ### how to use 
-Sorted images must be in their appropriate folders (IMPORTANT: name of folders MUST BE integers and consecutively named due to the way the functions are called). 
-An empty folder named 'validation' is also needed. 'Trainer.py' will use the current crucible detect model (which works flawlessly) and create two .csv files. 
-The .csv files are the label filed used for training and validation. It contains the image coordinates of the crucible in each photo and its powder volume (header: 'class'). 
-One .csv file is used for training and the other .csv file is used for validation. The code will automatically select 10% of the images to be used for validation. Then the code
-will start training a new model and save it as 'new_model.pth'. 
+* Sorted images must be in their appropriate folders (IMPORTANT: name of folders MUST BE integers and consecutively named due to the way the functions are called). <br />
+* An empty folder named 'validation' is also needed. 
+* 'Trainer.py' will use the current crucible detect model (which works flawlessly) and create two .csv files. 
+* The .csv files are the label filed used for training and validation. It contains the image coordinates of the crucible in each photo and its powder volume (header: 'class'). 
+* One .csv file is used for training and the other .csv file is used for validation. 
+* The code will automatically select 10% of the images to be used for validation. Then the code will start training a new model and save it as 'new_model.pth'. 
 
 ##### notes
 * Training the model with 25 images (22 used for training and 3 used for validation) took  minutes on a laptop without GPU acceleration. Using a dedicated graphics card will 
