@@ -16,8 +16,7 @@ will start training a new model and save it as 'new_model.pth'.
 drastically improve the training time but it had issues with running out of VRAM that couldn't be resolved. Running the code in Google collabs with their provided GPU runtime 
 worked fine and it was approximately 10 times faster. However, a human operator must be there to save the 'new_model.pth' before the runtime disconnects. Google collabs runtime will timeout 
 if it's idle (no code running) for 30 minutes or if there is no user input (even if code is running) for 2 hours. <br />
-
 * The 'path=' technically shouldn't be needed because it will be the same as the working directory but it's there for redundancy and if the trainer.py will be executed in a different
 working directory.  <br />
-
 * 'example.py' shows how to use the newly trained model. 
+* Every image in the folders will create a copy into the root directory for training. This may take up a lot of storage depending on the resolution of images. 
