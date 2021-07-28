@@ -12,7 +12,7 @@ import cv2 as cv
 import random as r
 import matplotlib.pyplot as plt
 
-cdmodel = core.Model.load('model.pth', ['sample'])
+cdmodel = core.Model.load('crucible.pth', ['sample'])
 csv = pd.DataFrame()
 path = 'C:/Users/chomi/Desktop/test/'
 counter = 0
