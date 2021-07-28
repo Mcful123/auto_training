@@ -11,9 +11,7 @@ import pandas as pd
 import cv2 as cv
 import random as r
 import matplotlib.pyplot as plt
-import time
 
-t1 = time.time()
 cdmodel = core.Model.load('model.pth', ['sample'])
 csv = pd.DataFrame()
 path = 'C:/Users/chomi/Desktop/test/'
@@ -75,9 +73,7 @@ model = core.Model(['0_','1_','2_','3_','4_'])
 losses = model.fit(loader, val_dataset, epochs=10, learning_rate=0.01, verbose=True)
 plt.plot(losses)
 plt.show()
-t2 = time.time()
-print('time', t2-t1)
-# model.save(path + 'new_model.pth')
+model.save(path + 'new_model.pth')
 
 
 
