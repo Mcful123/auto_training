@@ -13,7 +13,7 @@ Due to the lengthy training process, there is no finished model that could've be
 * The code will automatically select 10% of the images to be used for validation. Then the code will start training a new model and save it as 'new_model.pth'. 
 
 ##### notes
-* Training the model with 25 images (22 used for training and 3 used for validation) took 63 minutes on a laptop without GPU acceleration. Using a dedicated graphics card will 
+* Training the model with 25 images (22 used for training and 3 used for validation) took 38 minutes on a laptop without GPU acceleration. Using a dedicated graphics card will 
 drastically improve the training time but it had issues with running out of VRAM that couldn't be resolved. Running the code in Google collabs with their provided GPU runtime 
 worked fine and it was approximately 10 times faster. However, a human operator must be there to save the 'new_model.pth' before the runtime disconnects. Google collabs runtime will timeout 
 if it's idle (no code running) for 30 minutes or if there is no user input (even if code is running) for 2 hours. <br />
