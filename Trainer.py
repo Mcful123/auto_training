@@ -27,8 +27,8 @@ def func(num):
             lbl, box, score = cdmodel.predict(img)
             temp = box.numpy()[0]
             data = {'filename':[fname], 'width':[img.shape[1]], 'height':[img.shape[0]],
-                    'class':[str(num)+'_'], 'xmin':[round(temp[0])], 'ymin':[round(temp[1])],
-                    'xmax':[round(temp[2])], 'ymax':[round(temp[3])], 'image_id':[counter]}
+                    'class':[str(num)+'_'], 'xmin':[int(round(temp[0]))], 'ymin':[int(round(temp[1]))],
+                    'xmax':[int(round(temp[2]))], 'ymax':[int(round(temp[3]))], 'image_id':[counter]}
             csv = csv.append(pd.DataFrame(data))
             # images must be in one directory to be trained. So copying them into common dir
             cv.imwrite(path+fname, img)
